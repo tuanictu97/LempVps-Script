@@ -2,7 +2,7 @@
 #######################################################
 # LempVPS Script Installer v1.2
 # To install Lemp Script type: 
-# curl -sLO https://git.ufaceplus.com/tuanictu97/Lemp-Script/raw/master/install && bash install
+# curl -sLO https://git.ufaceplus.com/tuanictu97/LempVps-Script/raw/master/install && bash install
 #######################################################
 
 if [ $(id -u) != "0" ]; then
@@ -11,25 +11,25 @@ if [ $(id -u) != "0" ]; then
 fi
 if [ -f /var/cpanel/cpanel.config ]; then
 clear
-echo "Your server installed WHM/Cpanel, please reinstall to use Lemp Script."
+echo "Your server installed WHM/Cpanel, please reinstall to use LempVps Script."
 exit
 fi
 
 if [ -f /etc/psa/.psa.shadow ]; then
 clear
-echo "Your server installed Plesk, please reinstall to use Lemp Script."
+echo "Your server installed Plesk, please reinstall to use LempVps Script."
 exit
 fi
 
 if [ -f /etc/init.d/directadmin ]; then
 clear
-echo "Your server installed DirectAdmin, please reinstall to use Lemp Script."
+echo "Your server installed DirectAdmin, please reinstall to use LempVps Script."
 exit
 fi
 
 if [ -f /etc/init.d/webmin ]; then
 clear
-echo "Your server installed Webmin, please reinstall to use Lemp Script."
+echo "Your server installed Webmin, please reinstall to use LempVps Script."
 exit
 fi
 
@@ -52,9 +52,9 @@ fi
 
 if [ -f /etc/lemp/scripts.conf ]; then
 	echo "========================================================================="
-	echo "Server/VPS cua ban da cai san Lemp Script"
-	echo "Hay su dung lenh lemp de truy cap menu quan ly"
-	echo "Chao tam biet !"
+	echo "Server/VPS already installed LempVPS Script."
+	echo "Please use command 'lempvps' to manage server."
+	echo "See you soon!"
 	echo "========================================================================="
 exit
 fi

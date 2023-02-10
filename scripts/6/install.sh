@@ -15,7 +15,7 @@ yum -y install gawk bc wget lsof
 
 clear
 printf "=========================================================================\n"
-printf "Chung ta se kiem tra cac thong so VPS cua ban de dua ra cai dat hop ly \n"
+printf "We check infomation your VPS server.\n"
 printf "=========================================================================\n"
 
 cpu_name=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
@@ -29,10 +29,10 @@ server_swap_mb=`echo "scale=0;$server_swap_total/1024" | bc`
 server_ip=$(curl -L http://cpanel.net/showip.cgi)
 
 printf "=========================================================================\n"
-printf "Thong so server cua ban nhu sau \n"
+printf "Infomation your server \n"
 printf "=========================================================================\n"
-echo "Loai CPU : $cpu_name"
-echo "Tong so CPU core : $cpu_cores"
+echo "Name CPU : $cpu_name"
+echo "Number CPU core : $cpu_cores"
 echo "Toc do moi core : $cpu_freq MHz"
 echo "Tong dung luong RAM : $server_ram_mb MB"
 echo "Tong dung luong swap : $server_swap_mb MB"
@@ -42,7 +42,7 @@ printf "========================================================================
 printf "=========================================================================\n"
 
 if [ $server_ram_total -lt $low_ram ]; then
-	echo -e "Canh bao: dung luong RAM qua thap de cai HocVPS Script \n (it nhat 256MB) \n"
+	echo -e "Canh bao: dung luong RAM qua thap de cai LempVPS Script \n (it nhat 256MB) \n"
 	echo "huy cai dat..."
 	exit
 fi
