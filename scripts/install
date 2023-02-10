@@ -1,9 +1,13 @@
 #!/bin/bash
 #######################################################
 # LempVPS Script Installer v1.2
-# To install Lemp Script type: 
+# To install LempVPS Script type: 
 # curl -sLO https://git.ufaceplus.com/tuanictu97/LempVps-Script/raw/master/install && bash install
 #######################################################
+
+# detect os & dynamic call script
+# todo: need update
+
 
 if [ $(id -u) != "0" ]; then
     echo "You need to be root to perform this command. Run \"sudo su\" to become root!"
